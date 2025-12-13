@@ -1,6 +1,4 @@
-﻿'use client';
-
-import Head from 'next/head';
+﻿import Head from 'next/head';
 import Script from 'next/script';
 import { useState, useCallback, useRef, useEffect } from 'react';
 
