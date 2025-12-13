@@ -1,302 +1,177 @@
-# 🔮 Oráculo 2026 - Numerologia Interativa
+# 🔮 Oráculo das Cores 2026
+### Numerologia Interativa • Autoconhecimento • Estilo & Energia
 
-Descubra a cor que vai sintonizar sua prosperidade em 2026!
+Descubra a **cor que vai sintonizar sua prosperidade em 2026** através de um oráculo numerológico moderno, intuitivo e visual.
 
-Um teste numerológico interativo que revela qual cor do poder corresponde à sua data de nascimento e seus objetivos para o próximo ano. Integrado com Shopee para encontrar looks perfeitos na cor revelada.
-
----
-
-## ✨ Funcionalidades
-
-- 🎨 **9 Cores Numerológicas** - Cada uma com seu próprio arquétipo e significado profundo
-- 📅 **Cálculo Numerológico Preciso** - Baseado na redução numerológica de sua data de nascimento
-- 🎯 **Personalizações Completas** - Escolha sua ocasião:
-  - ✨ Réveillon (A Grande Virada)
-  - 💼 Carreira & Poder
-  - 💘 Amor, Date & Sedução
-  - ⚡ Energia Vital & Treino
-  - 🏠 Harmonia do Santuário
-- 👥 **Estilo Flexível** - Adapte para Masculino, Feminino ou Decoração/Objeto
-- 🛒 **Integração Shopee** - Copie a busca gerada e encontre looks na cor revelada
-- 📱 **Compartilhamento WhatsApp** - Divulgue seu resultado com amigos e familiares
-- 📊 **Google Analytics** - Rastreamento completo de eventos e comportamento do usuário
-- 🎬 **Open Graph Dinâmico** - Imagens customizadas para compartilhamento em redes sociais
-- 📱 **Responsivo** - Funciona perfeitamente em mobile, tablet e desktop
+🌐 Projeto online:  
+[https://oraculo-cores.vercel.app](https://oraculo-cores.vercel.app)
 
 ---
 
-## 🎨 As 9 Cores do Poder 2026
-
-| Número | Cor | Arquétipo | Tema | Significado |
-|--------|-----|-----------|------|------------|
-| 1 | 🔴 Vermelho | O Pioneiro | Chama Viva | Iniciativa, Fogo, Ação |
-| 2 | 🟠 Laranja | O Diplomata | Fusão | Conexão, Calor, Fluxo |
-| 3 | 🟡 Amarelo | O Criador | Palco | Brilho, Expansão, Sol |
-| 4 | 🟢 Verde | O Construtor | Alicerce | Raiz, Saúde, Terra |
-| 5 | 🔵 Azul Claro | O Explorador | Ventos de Mudança | Ar, Liberdade, Voo |
-| 6 | 🔷 Azul Índigo | O Guardião | Coração | Profundidade, Lealdade, Mar |
-| 7 | 🟣 Violeta | O Místico | Oculto | Intuição, Magia, Éter |
-| 8 | 🌸 Rosa | O Visionário | Coroação | Poder, Império, Ambição |
-| 9 | 💛 Dourado | O Mestre | Transmutação | Glória, Finalização, Ouro |
+> **🚀 Quickstart (rodar local)**
+>
+> Pré-requisitos: Node.js 18+
+>
+> ```
+> npm install
+> npm run dev
+> ```
+>
+> Acesse: http://localhost:3000
 
 ---
 
-## 🛠️ Stack Técnico
+## ✨ Sobre o Projeto
 
-- **Next.js 16** - Framework React moderna com Turbopack
-- **React 18** - Biblioteca de UI com Hooks
-- **CSS Customizado** - Design system próprio com variáveis CSS
-- **Vercel OG** - Geração dinâmica de imagens Open Graph
-- **Google Tag Manager** - Analytics e tracking de eventos
-- **Font Awesome 6** - Ícones de alta qualidade
-- **Google Fonts** - Tipografia Outfit
+O **Oráculo das Cores 2026** é uma experiência interativa de autoconhecimento baseada em numerologia, onde o usuário descobre **qual cor representa sua energia dominante para o ano**, a partir da data de nascimento e da intenção pessoal.
+
+A experiência foi criada para ser:
+- Visualmente impactante
+- Simples e intuitiva
+- Emocionalmente significativa
+- Otimizada para compartilhamento e conversão
 
 ---
 
-## 📦 Estrutura do Projeto
+## 🎨 As 9 Cores do Poder
 
-```
+Cada número numerológico corresponde a uma **cor-arquétipo**, com significado simbólico e aplicação prática:
+
+| Número | Cor | Arquétipo | Significado |
+|------|------|-----------|-------------|
+| 1 | 🔴 Vermelho | O Pioneiro | Ação, fogo, iniciativa |
+| 2 | 🟠 Laranja | O Diplomata | Conexão, fluxo, calor |
+| 3 | 🟡 Amarelo | O Criador | Brilho, expressão, comunicação |
+| 4 | 🟢 Verde | O Construtor | Raiz, saúde, estabilidade |
+| 5 | 🔵 Azul Claro | O Explorador | Liberdade, movimento |
+| 6 | 🔷 Azul Índigo | O Guardião | Cuidado, profundidade |
+| 7 | 🟣 Violeta | O Místico | Intuição, espiritualidade |
+| 8 | 🌸 Rosa | O Visionário | Poder, ambição |
+| 9 | 💛 Dourado | O Mestre | Conclusão, glória |
+
+---
+
+## 🎯 Funcionalidades
+
+- 📅 Cálculo numerológico automático
+- 🎨 Resultado visual com número, cor e arquétipo
+- 🎯 Escolha de intenção / ocasião:
+  - Réveillon
+  - Carreira & Poder
+  - Amor & Relacionamentos
+  - Energia Vital & Treino
+  - Harmonia do Lar
+- 👤 Estilo flexível (Masculino, Feminino, Decoração)
+- 🛒 Integração com Shopee (busca pronta)
+- 📱 Compartilhamento via WhatsApp
+- 📊 Google Analytics / Tag Manager
+- 🎬 Open Graph dinâmico
+- 📱 Totalmente responsivo
+
+---
+
+## 🧱 Stack Tecnológico
+
+- Next.js (Pages Router)
+- React 18
+- CSS customizado
+- Vercel OG (imagem OG dinâmica via API)
+- Google Analytics / GTM
+- Font Awesome 6
+- Google Fonts (Outfit)
+
+---
+
+## 📁 Estrutura do Projeto
+
 oraculo-cores/
 ├── pages/
-│   ├── index.js              # Componente principal do Oráculo
-│   └── api/
-│       └── og.js             # Gerador de Open Graph images dinâmicas
+│ ├── index.js        # Página única do Oráculo (UI + lógica + SEO via Head)
+│ └── api/
+│   └── og.js         # Open Graph dinâmico (endpoint /api/og)
 ├── public/
-│   ├── styles.css            # CSS global com design system
-│   ├── img/
-│   │   ├── favicon.ico
-│   │   ├── favicon-32x32.png
-│   │   ├── favicon-16x16.png
-│   │   ├── apple-touch-icon.png
-│   │   ├── android-chrome-192x192.png
-│   │   └── android-chrome-512x512.png
-├── next.config.js            # Configuração do Next.js
-├── package.json              # Dependências do projeto
-└── README.md                 # Este arquivo
-```
+│ ├── img/            # Ícones e imagens
+│ └── styles.css      # CSS global
+├── next.config.js
+├── package.json
+└── README.md
 
 ---
 
-## 🚀 Como Rodar Localmente
+## 🚀 Rodar Localmente
 
-### Pré-requisitos
-- Node.js 18+ instalado
-- npm ou yarn
+Pré-requisitos:
+- Node.js 18+
 
-### Instalação
-
-```bash
-# Clone o repositório
-git clone https://github.com/SEU_USUARIO/oraculo-cores.git
-cd oraculo-cores
-
-# Instale as dependências
+Instalação:
+```
 npm install
-
-# Inicie o servidor de desenvolvimento
 npm run dev
 ```
 
-Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
+Acesse no navegador:
+http://localhost:3000
 
 ---
 
-## 🔨 Scripts Disponíveis
+## 🌐 Deploy
 
-```bash
-# Desenvolvimento com Hot Reload
-npm run dev
+Deploy automático via Vercel.
 
-# Build para produção
-npm run build
+Sempre que fizer git push, o projeto é atualizado automaticamente em produção.
 
-# Iniciar servidor de produção
-npm start
+---
 
-# Verificar linting (se configurado)
-npm run lint
+## 🔍 SEO & Performance
+
+- SEO via Head (título, descrição, OG e Twitter cards) em `pages/index.js`
+- HTTPS por padrão
+- Otimização nativa do Next.js
+- Open Graph dinâmico para compartilhamento social (via `/api/og`)
+
+---
+
+## 🎨 Personalização Rápida
+
+Textos, layout e lógica do oráculo:
+`pages/index.js`
+
+Estilos globais:
+`public/styles.css`
+
+Open Graph (preview ao compartilhar):
+`pages/api/og.js`
+
+---
+
+## 🧯 Estabilidade & Segurança
+
+- Sem banco de dados e sem autenticação (projeto leve)
+- Sem rotas sensíveis; somente endpoint público para OG image (`/api/og`)
+- Cache automático Vercel
+- Projeto estável para produção
+
+---
+
+## 📌 Status do Projeto
+
+Online  
+Estável  
+Produção  
+Em evolução contínua
+
+---
+
+## 👨‍💻 Autor
+
+Alexandre Moura  
+Criador do Oráculo das Cores  
+
+Portfólio / Serviços (Avaliação 360° Grátis):  
+https://alexandre-dev.vercel.app/
+
+
+---
+
+🔮 Desenvolvido com intenção, estética e propósito.
 ```
-
----
-
-## 📊 Como Funciona
-
-1. **Entrada do Usuário**
-   - Data de nascimento (obrigatória)
-   - Ocasião/Foco (Réveillon, Carreira, Amor, Treino, Casa)
-   - Estilo (Masculino, Feminino, Decoração/Objeto)
-
-2. **Cálculo Numerológico**
-   - Soma o dia + mês + 1 (ano base)
-   - Reduz a um dígito único (1-9)
-   - Busca a cor correspondente
-
-3. **Exibição de Resultado**
-   - Número calculado com halo colorido
-   - Nome e cor em destaque
-   - Arquétipo e significado personalizados
-   - Tags com temas principais
-   - Search term gerado automaticamente
-
-4. **Ações do Usuário**
-   - Copiar search term (automático)
-   - Abrir Shopee com link de afiliado
-   - Compartilhar no WhatsApp
-
----
-
-## 🌐 Deploy no Vercel
-
-### Método 1: Deploy Automático (Recomendado)
-
-1. Faça push do seu código para GitHub
-2. Acesse [Vercel.com](https://vercel.com)
-3. Clique em "New Project"
-4. Selecione seu repositório GitHub
-5. Clique "Deploy"
-6. Pronto! Seu site está live em `oraculo-cores.vercel.app`
-
-### Método 2: Deploy via CLI
-
-```bash
-# Instale Vercel CLI globalmente
-npm i -g vercel
-
-# Faça login
-vercel login
-
-# Deploy
-vercel
-```
-
----
-
-## 📈 Analytics & Rastreamento
-
-O projeto integra **Google Tag Manager** com os seguintes eventos:
-
-- `form_start` - Usuário clica no campo de data
-- `form_complete` - Formulário é submetido com sucesso
-- `click_vitrine` - Usuário clica em "Ver Vitrine de Ideias"
-- `share_intent` - Usuário clica em compartilhar WhatsApp
-
-Configure sua propriedade do Google Analytics no `pages/index.js`:
-```javascript
-gtag('config', 'G-XXXXXXX'); // Substitua com seu ID
-```
-
----
-
-## 🎨 Customização
-
-### Mudar Cores
-Edite o objeto `NUMEROLOGY_DATA` em `pages/index.js`:
-```javascript
-1: { 
-  name: "Vermelho", 
-  hex: "#ff5252", // Mude este valor
-  archetype: "O Pioneiro",
-  // ...
-}
-```
-
-### Mudar Link da Shopee
-Edite `MASTER_LINK` em `pages/index.js`:
-```javascript
-const MASTER_LINK = "https://s.shopee.com.br/seu-link-aqui";
-```
-
-### Mudar Ocasiões
-Adicione novas opções no `<select id="occasion">`:
-```javascript
-<option value="nova">🎯 Nova Ocasião</option>
-```
-
-Depois atualize a lógica em `handleCalculate()`.
-
----
-
-## 🔒 Segurança & Performance
-
-- ✅ Proteção contra XSS com `dangerouslySetInnerHTML` seguro
-- ✅ Bloqueio de extensões conflitantes (TronLink, MetaMask)
-- ✅ Compressão automática de assets
-- ✅ Otimização de imagens
-- ✅ Cache dinâmico no Vercel
-- ✅ HTTPS por padrão
-
----
-
-## 📱 Compatibilidade
-
-- ✅ Chrome/Edge 90+
-- ✅ Firefox 88+
-- ✅ Safari 14+
-- ✅ Mobile Safari (iOS 14+)
-- ✅ Android Chrome
-
----
-
-## 🤝 Contribuindo
-
-Sugestões e melhorias são bem-vindas!
-
-1. Faça um Fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
----
-
-## 📝 Licença
-
-Este projeto está sob a licença **MIT**. Você é livre para usar, modificar e distribuir, desde que mantenha a atribuição original.
-
----
-
-## 👨‍💻 Desenvolvedor
-
-**Seu Nome**  
-Web Developer | Digital Content Creator  
-📧 seu.email@exemplo.com  
-🔗 [Portfolio](https://seu-portfolio.com)  
-📱 [@seu_instagram](https://instagram.com/seu_instagram)
-
----
-
-## 🙏 Agradecimentos
-
-- 🎨 Inspiração em numerologia moderna
-- 🛒 Integração Shopee para monetização
-- 📊 Google para analytics
-- 🚀 Vercel pela plataforma incrível
-- 💙 Next.js pela excelente DX
-
----
-
-## 📞 Suporte
-
-Encontrou um bug? Abra uma issue no GitHub!
-
-Se tiver dúvidas, envie um email ou abra uma discussão no repo.
-
----
-
-## 🎉 Changelog
-
-### v1.0.0 - 13 de Dezembro de 2025
-- ✅ Lançamento inicial
-- ✅ 9 cores numerológicas
-- ✅ Integração Shopee completa
-- ✅ Compartilhamento WhatsApp
-- ✅ Analytics Google
-- ✅ Open Graph dinâmico
-- ✅ Design responsivo
-- ✅ Proteger contra extensões
-
----
-
-**Desenvolvido com ❤️ e muita numerologia mágica.**
-
-🔮 Descubra sua cor de poder para 2026! 🔮
