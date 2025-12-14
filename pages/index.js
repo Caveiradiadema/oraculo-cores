@@ -5,15 +5,69 @@ import { useState, useCallback, useRef, useEffect } from 'react';
 console.log('✅ pages/index.js carregado com sucesso');
 
 const NUMEROLOGY_DATA = {
-  1: { name: "Vermelho", hex: "#ff5252", archetype: "O Pioneiro", tags: ["Iniciativa", "Fogo", "Ação"], desc: "Seu 2026 pede **Chama Viva**. O número 1 é o Big Bang pessoal. O **Vermelho** te dá a voltagem necessária para sair da inércia, liderar sem pedir licença e queimar qualquer insegurança." },
-  2: { name: "Laranja", hex: "#ff9800", archetype: "O Diplomata", tags: ["Conexão", "Calor", "Fluxo"], desc: "[ANO] [MÊS]: será sobre **Fusão**. O **Laranja** ativa seu magnetismo social, atraindo parcerias férteis e amores leves. É a cor que dissolve barreiras e cria pontes douradas." },
-  3: { name: "Amarelo", hex: "#ffeb3b", archetype: "O Criador", tags: ["Brilho", "Expansão", "Sol"], desc: "[ANO] [MÊS]: é o ano do **Palco**. O universo quer te ver brilhar. O **Amarelo** atua como um holofote solar, destravando a abundância que vem através da sua voz e da sua imagem." },
-  4: { name: "Verde", hex: "#4caf50", archetype: "O Construtor", tags: ["Raiz", "Saúde", "Terra"], desc: "[ANO] [MÊS]: exige **Alicerce**. É hora de materializar. O **Verde** acalma a mente ansiosa e traz a frequência de cura necessária para que seus projetos cresçam sólidos como árvores antigas." },
-  5: { name: "Azul Claro", hex: "#40c4ff", archetype: "O Explorador", tags: ["Ar", "Liberdade", "Voo"], desc: "[ANO] [MÊS]: traz **Ventos de Mudança**. A estagnação acabou. O **Azul Claro** é seu oxigênio: ele permite navegar por transformações rápidas com a leveza de quem sabe voar." },
-  6: { name: "Azul Índigo", hex: "#536dfe", archetype: "O Guardião", tags: ["Profundidade", "Lealdade", "Mar"], desc: "[ANO] [MÊS]: foca no **Coração**. É hora de proteger o que importa. O **Azul Índigo** traz a autoridade serena do oceano profundo, curando relações e trazendo nobreza à sua presença." },
-  7: { name: "Violeta", hex: "#e040fb", archetype: "O Místico", tags: ["Intuição", "Magia", "Éter"], desc: "[ANO] [MÊS]: é sobre **Oculto**. Enquanto todos olham fora, você vê além. O **Violeta** blinda sua aura e aguça o terceiro olho para encontrar tesouros onde ninguém mais está procurando." },
-  8: { name: "Rosa", hex: "#ff4081", archetype: "O Visionário", tags: ["Poder", "Império", "Ambição"], desc: "[ANO] [MÊS]: é o ano da **Coroação**. O sucesso material te espera. O **Rosa** equilibra sua ambição com humanidade, garantindo que você conquiste o trono sem perder a alma." },
-  9: { name: "Dourado", hex: "#ffd740", archetype: "O Mestre", tags: ["Glória", "Finalização", "Ouro"], desc: "[ANO] [MÊS]: é a **Transmutação**. Um ciclo se fecha com chave de ouro. O **Dourado** atrai a vitória final e a sabedoria suprema, limpando o caminho para uma nova era." }
+  1: {
+    name: "Vermelho",
+    hex: "#ff5252",
+    archetype: "O Pioneiro",
+    tags: ["Iniciativa", "Fogo", "Ação"],
+    desc: "**[PERIODO]**: Chama Viva. O número 1 é o Big Bang pessoal. O **Vermelho** te dá a voltagem necessária para sair da inércia, liderar sem pedir licença e queimar qualquer insegurança."
+  },
+  2: {
+    name: "Laranja",
+    hex: "#ff9800",
+    archetype: "O Diplomata",
+    tags: ["Conexão", "Calor", "Fluxo"],
+    desc: "**[PERIODO]**: será sobre **Fusão**. O **Laranja** ativa seu magnetismo social, atraindo parcerias férteis e amores leves. É a cor que dissolve barreiras e cria pontes douradas."
+  },
+  3: {
+    name: "Amarelo",
+    hex: "#ffeb3b",
+    archetype: "O Criador",
+    tags: ["Brilho", "Expansão", "Sol"],
+    desc: "**[PERIODO]**: é o ano do **Palco**. O universo quer te ver brilhar. O **Amarelo** atua como um holofote solar, destravando a abundância que vem através da sua voz e da sua imagem."
+  },
+  4: {
+    name: "Verde",
+    hex: "#4caf50",
+    archetype: "O Construtor",
+    tags: ["Raiz", "Saúde", "Terra"],
+    desc: "**[PERIODO]**: exige **Alicerce**. É hora de materializar. O **Verde** acalma a mente ansiosa e traz a frequência de cura necessária para que seus projetos cresçam sólidos como árvores antigas."
+  },
+  5: {
+    name: "Azul Claro",
+    hex: "#40c4ff",
+    archetype: "O Explorador",
+    tags: ["Ar", "Liberdade", "Voo"],
+    desc: "**[PERIODO]**: traz **Ventos de Mudança**. A estagnação acabou. O **Azul Claro** é seu oxigênio: ele permite navegar por transformações rápidas com a leveza de quem sabe voar."
+  },
+  6: {
+    name: "Azul Índigo",
+    hex: "#536dfe",
+    archetype: "O Guardião",
+    tags: ["Profundidade", "Lealdade", "Mar"],
+    desc: "**[PERIODO]**: foca no **Coração**. É hora de proteger o que importa. O **Azul Índigo** traz a autoridade serena do oceano profundo, curando relações e trazendo nobreza à sua presença."
+  },
+  7: {
+    name: "Violeta",
+    hex: "#e040fb",
+    archetype: "O Místico",
+    tags: ["Intuição", "Magia", "Éter"],
+    desc: "**[PERIODO]**: é sobre **Oculto**. Enquanto todos olham fora, você vê além. O **Violeta** blinda sua aura e aguça o terceiro olho para encontrar tesouros onde ninguém mais está procurando."
+  },
+  8: {
+    name: "Rosa",
+    hex: "#ff4081",
+    archetype: "O Visionário",
+    tags: ["Poder", "Império", "Ambição"],
+    desc: "**[PERIODO]**: é o ano da **Coroação**. O sucesso material te espera. O **Rosa** equilibra sua ambição com humanidade, garantindo que você conquiste o trono sem perder a alma."
+  },
+  9: {
+    name: "Dourado",
+    hex: "#ffd740",
+    archetype: "O Mestre",
+    tags: ["Glória", "Finalização", "Ouro"],
+    desc: "**[PERIODO]**: é a **Transmutação**. Um ciclo se fecha com chave de ouro. O **Dourado** atrai a vitória final e a sabedoria suprema, limpando o caminho para uma nova era."
+  }
 };
 
 const getMonthName = (monthNum) => {
@@ -26,7 +80,7 @@ const getMonthName = (monthNum) => {
 
 const MASTER_LINK = "https://s.shopee.com.br/8fLHdaHSxg";
 
-// ========== FUNÇÕES DE NUMEROLOGIA CORRIGIDAS ==========
+// ========== FUNÇÕES DE NUMEROLOGIA ==========
 const reduceTo1to9 = (n) => {
   let num = Math.abs(Number(n) || 0);
   while (num > 9) {
@@ -43,14 +97,14 @@ const calcPersonalYear = (birthDate, year = 2026) => {
   const [, m, d] = birthDate.split('-').map(Number);
   const universal = getUniversalYearNumber(year);
   const py = reduceTo1to9(reduceTo1to9(d) + reduceTo1to9(m) + universal);
-  console.log(`📊 Ano Pessoal 2026: dia=${d}, mês=${m}, universal=${universal} → ${py}`);
+  console.log(`📊 Ano Pessoal ${year}: dia=${d}, mês=${m}, universal=${universal} → ${py}`);
   return py;
 };
 
 const calcPersonalMonth = (birthDate, year = 2026, month = new Date().getMonth() + 1) => {
   const py = calcPersonalYear(birthDate, year);
   const pm = reduceTo1to9(py + month);
-  console.log(`📊 Mês Pessoal: AP=${py}, mês=${month} → ${pm}`);
+  console.log(`📊 Mês Pessoal: AP=${py}, mês=${month}, ano=${year} → ${pm}`);
   return pm;
 };
 
@@ -59,7 +113,7 @@ const calcPersonalDay = (birthDate, year = 2026) => {
   const dayNum = new Date().getDate();
   const pm = calcPersonalMonth(birthDate, year, monthNum);
   const pd = reduceTo1to9(pm + dayNum);
-  console.log(`📊 Dia Pessoal: MP=${pm}, dia=${dayNum} → ${pd}`);
+  console.log(`📊 Dia Pessoal: MP=${pm}, dia=${dayNum}, mês=${monthNum}, ano=${year} → ${pd}`);
   return pd;
 };
 // ========== FIM FUNÇÕES NUMEROLOGIA ==========
@@ -94,7 +148,7 @@ export default function OracleHome() {
 
   const calculateNumerology = useCallback((birthDate) => {
     console.log('📊 Calculando numerologia para:', birthDate);
-    const [y, m, d] = birthDate.split('-').map(Number);
+    const [, m, d] = birthDate.split('-').map(Number);
     let num = d + m + 1;
     while (num > 9) {
       num = num.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
@@ -129,37 +183,44 @@ export default function OracleHome() {
     }
 
     try {
+      const now = new Date();
+      const currentYear = now.getFullYear();
+      const currentMonth = now.getMonth() + 1;
+
       let num;
 
       // ========== LÓGICA DE CÁLCULO POR OCASIÃO ==========
       if (occasion === 'reveillon') {
-        // Réveillon usa o cálculo original (Ano Pessoal base)
+        // Réveillon: cálculo original + texto fixo 2026
         num = calculateNumerology(birthdate);
         console.log(`🎆 REVEILLON → Usando cálculo original: ${num}`);
       } else if (occasion === 'work' || occasion === 'home') {
-        // Work e Home usam Mês Pessoal
-        num = calcPersonalMonth(birthdate, 2026);
-        console.log(`${occasion === 'work' ? '💼' : '🏠'} ${occasion.toUpperCase()} → Mês Pessoal: ${num}`);
+        // Work/Home: ANO ATUAL
+        num = calcPersonalMonth(birthdate, currentYear, currentMonth);
+        console.log(`${occasion === 'work' ? '💼' : '🏠'} ${occasion.toUpperCase()} → Mês Pessoal (${currentMonth}/${currentYear}): ${num}`);
       } else if (occasion === 'love' || occasion === 'gym') {
-        // Love e Gym usam Dia Pessoal
-        num = calcPersonalDay(birthdate, 2026);
-        console.log(`${occasion === 'love' ? '💘' : '⚡'} ${occasion.toUpperCase()} → Dia Pessoal: ${num}`);
+        // Love/Gym: ANO ATUAL (cálculo diário continua usando o dia de hoje, mas o texto não mostra o dia)
+        num = calcPersonalDay(birthdate, currentYear);
+        console.log(`${occasion === 'love' ? '💘' : '⚡'} ${occasion.toUpperCase()} → Dia Pessoal (ano atual ${currentYear}): ${num}`);
       }
       // ========== FIM LÓGICA ==========
 
       const data = NUMEROLOGY_DATA[num];
-
       if (!data) throw new Error('Cor não encontrada');
 
-      // Substitui [ANO] [MÊS] se não for Réveillon
-      let finalDesc = data.desc;
-      if (occasion !== 'reveillon') {
-        const currentMonth = getMonthName(new Date().getMonth() + 1);
-        const currentYear = new Date().getFullYear();
-        finalDesc = finalDesc
-          .replace('[ANO]', `${currentYear}`)
-          .replace('[MÊS]:', `${currentMonth}:`);
+      // ========== PERÍODO DINÂMICO ==========
+      let periodLabel;
+
+      if (occasion === 'reveillon') {
+        // FIXO
+        periodLabel = 'Réveillon 2026';
+      } else {
+        // TODAS AS OUTRAS: só MÊS + ANO atual
+        periodLabel = `${getMonthName(currentMonth)} ${currentYear}`;
       }
+
+      const finalDesc = data.desc.replace(/\[PERIODO\]/g, periodLabel);
+      // ========== FIM PERÍODO ==========
 
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'form_complete', {
@@ -271,6 +332,7 @@ export default function OracleHome() {
     if (!result) return;
 
     const occasion = document.getElementById('occasion')?.value;
+
     const occasionNames = {
       reveillon: '🎆 Réveillon',
       work: '💼 Carreira',
@@ -279,12 +341,18 @@ export default function OracleHome() {
       home: '🏠 Lar'
     };
 
+    const now = new Date();
+    const shareYear = occasion === 'reveillon' ? 2026 : now.getFullYear();
+
     const occasionEmoji = occasionNames[occasion] || '✨ Ocasião';
     const tagsText = result.tags.join(' • ');
-    const descSnippet = result.desc.replace(/\[MÊS\]:/g, '').substring(0, 80).trim();
+    const descSnippet = result.desc
+      .replace(/\*\*(.*?)\*\*/g, '$1')
+      .substring(0, 80)
+      .trim();
 
     console.log('📱 Compartilhando no WhatsApp:', result.name);
-    const text = `🔮 Minha vibração para ${occasionEmoji} em 2026 é **${result.name.toUpperCase()}**!\n\n${result.archetype}\n${tagsText}\n\n"${descSnippet}..."\n\nQual é a SUA cor para cada ocasião?\n\nDescubra grátis aqui: ${typeof window !== 'undefined' ? window.location.href : 'https://oraculo-cores.vercel.app'}`;
+    const text = `🔮 Minha vibração para ${occasionEmoji} em ${shareYear} é **${result.name.toUpperCase()}**!\n\n${result.archetype}\n${tagsText}\n\n"${descSnippet}..."\n\nQual é a SUA cor para cada ocasião?\n\nDescubra grátis aqui: ${typeof window !== 'undefined' ? window.location.href : 'https://oraculo-cores.vercel.app'}`;
     const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
 
     if (typeof window !== 'undefined' && window.gtag) {
@@ -334,16 +402,24 @@ export default function OracleHome() {
       </Head>
 
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-Z7BKYJSJN6" strategy="afterInteractive" />
-      <Script id="gtag-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-Z7BKYJSJN6');` }} />
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-Z7BKYJSJN6');`
+        }}
+      />
 
       <div className="container">
         <h1><i className="fas fa-moon"></i> Oráculo 2026</h1>
         <p className="sub">Descubra a frequência cromática que vai sintonizar sua prosperidade no próximo ciclo.</p>
+
         <form onSubmit={handleCalculate}>
           <div className="form-group">
             <label htmlFor="birthdate">Sua Data de Nascimento</label>
             <input type="date" id="birthdate" onFocus={handleFormStart} required />
           </div>
+
           <div className="form-group">
             <label htmlFor="occasion">Seu Foco Principal</label>
             <select id="occasion" defaultValue="reveillon">
@@ -354,6 +430,7 @@ export default function OracleHome() {
               <option value="home">🏠 Harmonia do Santuário</option>
             </select>
           </div>
+
           <div className="form-group">
             <label htmlFor="gender">Seu Estilo</label>
             <select id="gender" defaultValue="male">
@@ -362,38 +439,57 @@ export default function OracleHome() {
               <option value="uni">Decoração / Objeto</option>
             </select>
           </div>
+
           <button type="submit" className="btn-calc" disabled={isLoading}>
             {isLoading ? '⏳ PROCESSANDO...' : 'REVELAR ENERGIA'}
           </button>
         </form>
+
         {result && (
           <div id="result" style={{ display: 'block' }}>
             <div className="archetype-title">ARQUÉTIPO: {result.archetype}</div>
             <div className="badge" style={{ boxShadow: `0 0 50px ${result.hex}`, borderColor: result.hex }}>{result.num}</div>
-            <h2 className="color-hero" style={{ color: result.hex, textShadow: `0 0 30px ${result.hex}90` }}>{result.name}</h2>
+
+            <h2 className="color-hero" style={{ color: result.hex, textShadow: `0 0 30px ${result.hex}90` }}>
+              {result.name}
+            </h2>
+
             <div className="insight-card" style={{ borderLeftColor: result.hex }}>
-              <div className="insight-text" dangerouslySetInnerHTML={{ __html: result.desc.replace(/\*\*(.*?)\*\*/g, `<b style="color:${result.hex}">$1</b>`).replace(/([A-Z][a-z]+o)\:/g, `<strong style="color:${result.hex}">$1</strong>:`) }} />
+              <div
+                className="insight-text"
+                dangerouslySetInnerHTML={{
+                  __html: result.desc
+                    .replace(/\*\*(.*?)\*\*/g, `<b style="color:${result.hex}">$1</b>`)
+                    .replace(/([A-Z][a-z]+o)\:/g, `<strong style="color:${result.hex}">$1</strong>:`)
+                }}
+              />
               <div className="tags-container">
                 {result.tags.map((tag) => (
-                  <span key={tag} className="tag" style={{ borderColor: result.hex }}>{tag}</span>
+                  <span key={tag} className="tag" style={{ borderColor: result.hex }}>
+                    {tag}
+                  </span>
                 ))}
               </div>
             </div>
+
             <div className="copy-box">
               <span style={{ fontSize: '0.65rem', textTransform: 'uppercase', color: '#aaa', fontWeight: 700 }}>
                 <i className="fas fa-magic"></i> Sua busca de poder (Copiada!)
               </span>
               <div className="search-preview">{searchTerm}</div>
             </div>
+
             <button className="btn-shopee" id="btnAction" onClick={handleCopyAndGo}>
               Ver Vitrine de Ideias <i className="fas fa-images"></i>
             </button>
+
             <button className="btn-share" onClick={handleShare}>
               <i className="fab fa-whatsapp"></i> Compartilhar no WhatsApp
             </button>
           </div>
         )}
       </div>
+
       <div id="toast" ref={toastRef}>
         <i className="fas fa-check-circle"></i>
         <span>Look copiado! Cole na Shopee.</span>
