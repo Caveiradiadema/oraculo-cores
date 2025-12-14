@@ -6,17 +6,63 @@ console.log('✅ pages/index.js carregado com sucesso');
 
 const NUMEROLOGY_DATA = {
   1: { name: "Vermelho", hex: "#ff5252", archetype: "O Pioneiro", tags: ["Iniciativa", "Fogo", "Ação"], desc: "Seu 2026 pede **Chama Viva**. O número 1 é o Big Bang pessoal. O **Vermelho** te dá a voltagem necessária para sair da inércia, liderar sem pedir licença e queimar qualquer insegurança." },
-  2: { name: "Laranja", hex: "#ff9800", archetype: "O Diplomata", tags: ["Conexão", "Calor", "Fluxo"], desc: "Seu 2026 será sobre **Fusão**. O **Laranja** ativa seu magnetismo social, atraindo parcerias férteis e amores leves. É a cor que dissolve barreiras e cria pontes douradas." },
-  3: { name: "Amarelo", hex: "#ffeb3b", archetype: "O Criador", tags: ["Brilho", "Expansão", "Sol"], desc: "Seu 2026 é o ano do **Palco**. O universo quer te ver brilhar. O **Amarelo** atua como um holofote solar, destravando a abundância que vem através da sua voz e da sua imagem." },
-  4: { name: "Verde", hex: "#4caf50", archetype: "O Construtor", tags: ["Raiz", "Saúde", "Terra"], desc: "Seu 2026 exige **Alicerce**. É hora de materializar. O **Verde** acalma a mente ansiosa e traz a frequência de cura necessária para que seus projetos cresçam sólidos como árvores antigas." },
-  5: { name: "Azul Claro", hex: "#40c4ff", archetype: "O Explorador", tags: ["Ar", "Liberdade", "Voo"], desc: "Seu 2026 traz **Ventos de Mudança**. A estagnação acabou. O **Azul Claro** é seu oxigênio: ele permite navegar por transformações rápidas com a leveza de quem sabe voar." },
-  6: { name: "Azul Índigo", hex: "#536dfe", archetype: "O Guardião", tags: ["Profundidade", "Lealdade", "Mar"], desc: "Seu 2026 foca no **Coração**. É hora de proteger o que importa. O **Azul Índigo** traz a autoridade serena do oceano profundo, curando relações e trazendo nobreza à sua presença." },
-  7: { name: "Violeta", hex: "#e040fb", archetype: "O Místico", tags: ["Intuição", "Magia", "Éter"], desc: "Seu 2026 é sobre **Oculto**. Enquanto todos olham fora, você vê além. O **Violeta** blinda sua aura e aguça o terceiro olho para encontrar tesouros onde ninguém mais está procurando." },
-  8: { name: "Rosa", hex: "#ff4081", archetype: "O Visionário", tags: ["Poder", "Império", "Ambição"], desc: "Seu 2026 é o ano da **Coroação**. O sucesso material te espera. O **Rosa** equilibra sua ambição com humanidade, garantindo que você conquiste o trono sem perder a alma." },
-  9: { name: "Dourado", hex: "#ffd740", archetype: "O Mestre", tags: ["Glória", "Finalização", "Ouro"], desc: "Seu 2026 é a **Transmutação**. Um ciclo se fecha com chave de ouro. O **Dourado** atrai a vitória final e a sabedoria suprema, limpando o caminho para uma nova era." }
+  2: { name: "Laranja", hex: "#ff9800", archetype: "O Diplomata", tags: ["Conexão", "Calor", "Fluxo"], desc: "[MÊS]: Seu 2026 será sobre **Fusão**. O **Laranja** ativa seu magnetismo social, atraindo parcerias férteis e amores leves. É a cor que dissolve barreiras e cria pontes douradas." },
+  3: { name: "Amarelo", hex: "#ffeb3b", archetype: "O Criador", tags: ["Brilho", "Expansão", "Sol"], desc: "[MÊS]: Seu 2026 é o ano do **Palco**. O universo quer te ver brilhar. O **Amarelo** atua como um holofote solar, destravando a abundância que vem através da sua voz e da sua imagem." },
+  4: { name: "Verde", hex: "#4caf50", archetype: "O Construtor", tags: ["Raiz", "Saúde", "Terra"], desc: "[MÊS]: Seu 2026 exige **Alicerce**. É hora de materializar. O **Verde** acalma a mente ansiosa e traz a frequência de cura necessária para que seus projetos cresçam sólidos como árvores antigas." },
+  5: { name: "Azul Claro", hex: "#40c4ff", archetype: "O Explorador", tags: ["Ar", "Liberdade", "Voo"], desc: "[MÊS]: Seu 2026 traz **Ventos de Mudança**. A estagnação acabou. O **Azul Claro** é seu oxigênio: ele permite navegar por transformações rápidas com a leveza de quem sabe voar." },
+  6: { name: "Azul Índigo", hex: "#536dfe", archetype: "O Guardião", tags: ["Profundidade", "Lealdade", "Mar"], desc: "[MÊS]: Seu 2026 foca no **Coração**. É hora de proteger o que importa. O **Azul Índigo** traz a autoridade serena do oceano profundo, curando relações e trazendo nobreza à sua presença." },
+  7: { name: "Violeta", hex: "#e040fb", archetype: "O Místico", tags: ["Intuição", "Magia", "Éter"], desc: "[MÊS]: Seu 2026 é sobre **Oculto**. Enquanto todos olham fora, você vê além. O **Violeta** blinda sua aura e aguça o terceiro olho para encontrar tesouros onde ninguém mais está procurando." },
+  8: { name: "Rosa", hex: "#ff4081", archetype: "O Visionário", tags: ["Poder", "Império", "Ambição"], desc: "[MÊS]: Seu 2026 é o ano da **Coroação**. O sucesso material te espera. O **Rosa** equilibra sua ambição com humanidade, garantindo que você conquiste o trono sem perder a alma." },
+  9: { name: "Dourado", hex: "#ffd740", archetype: "O Mestre", tags: ["Glória", "Finalização", "Ouro"], desc: "[MÊS]: Seu 2026 é a **Transmutação**. Um ciclo se fecha com chave de ouro. O **Dourado** atrai a vitória final e a sabedoria suprema, limpando o caminho para uma nova era." }
+};
+
+const getMonthName = (monthNum) => {
+  const months = [
+    'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+    'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+  ];
+  return months[monthNum - 1] || 'mês atual';
 };
 
 const MASTER_LINK = "https://s.shopee.com.br/8fLHdaHSxg";
+
+// ========== FUNÇÕES DE NUMEROLOGIA CORRIGIDAS ==========
+const reduceTo1to9 = (n) => {
+  let num = Math.abs(Number(n) || 0);
+  while (num > 9) {
+    num = String(num).split('').reduce((a, b) => a + Number(b), 0);
+  }
+  return num || 1;
+};
+
+const getUniversalYearNumber = (year = 2026) => {
+  return reduceTo1to9(String(year).split('').reduce((a, b) => a + Number(b), 0));
+};
+
+const calcPersonalYear = (birthDate, year = 2026) => {
+  const [, m, d] = birthDate.split('-').map(Number);
+  const universal = getUniversalYearNumber(year);
+  const py = reduceTo1to9(reduceTo1to9(d) + reduceTo1to9(m) + universal);
+  console.log(`📊 Ano Pessoal 2026: dia=${d}, mês=${m}, universal=${universal} → ${py}`);
+  return py;
+};
+
+const calcPersonalMonth = (birthDate, year = 2026, month = new Date().getMonth() + 1) => {
+  const py = calcPersonalYear(birthDate, year);
+  const pm = reduceTo1to9(py + month);
+  console.log(`📊 Mês Pessoal: AP=${py}, mês=${month} → ${pm}`);
+  return pm;
+};
+
+const calcPersonalDay = (birthDate, year = 2026) => {
+  const monthNum = new Date().getMonth() + 1;
+  const dayNum = new Date().getDate();
+  const pm = calcPersonalMonth(birthDate, year, monthNum);
+  const pd = reduceTo1to9(pm + dayNum);
+  console.log(`📊 Dia Pessoal: MP=${pm}, dia=${dayNum} → ${pd}`);
+  return pd;
+};
+// ========== FIM FUNÇÕES NUMEROLOGIA ==========
 
 export default function OracleHome() {
   const [result, setResult] = useState(null);
@@ -53,7 +99,7 @@ export default function OracleHome() {
     while (num > 9) {
       num = num.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
     }
-    console.log('✅ Resultado numerológico:', num);
+    console.log('✅ Resultado numerológico (REVEILLON):', num);
     return num;
   }, []);
 
@@ -83,10 +129,34 @@ export default function OracleHome() {
     }
 
     try {
-      const num = calculateNumerology(birthdate);
+      let num;
+
+      // ========== LÓGICA DE CÁLCULO POR OCASIÃO ==========
+      if (occasion === 'reveillon') {
+        // Réveillon usa o cálculo original (Ano Pessoal base)
+        num = calculateNumerology(birthdate);
+        console.log(`🎆 REVEILLON → Usando cálculo original: ${num}`);
+      } else if (occasion === 'work' || occasion === 'home') {
+        // Work e Home usam Mês Pessoal
+        num = calcPersonalMonth(birthdate, 2026);
+        console.log(`${occasion === 'work' ? '💼' : '🏠'} ${occasion.toUpperCase()} → Mês Pessoal: ${num}`);
+      } else if (occasion === 'love' || occasion === 'gym') {
+        // Love e Gym usam Dia Pessoal
+        num = calcPersonalDay(birthdate, 2026);
+        console.log(`${occasion === 'love' ? '💘' : '⚡'} ${occasion.toUpperCase()} → Dia Pessoal: ${num}`);
+      }
+      // ========== FIM LÓGICA ==========
+
       const data = NUMEROLOGY_DATA[num];
 
       if (!data) throw new Error('Cor não encontrada');
+
+      // Substitui [MÊS] se não for Réveillon
+      let finalDesc = data.desc;
+      if (occasion !== 'reveillon') {
+        const currentMonth = getMonthName(new Date().getMonth() + 1);
+        finalDesc = finalDesc.replace('[MÊS]', currentMonth);
+      }
 
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'form_complete', {
@@ -120,7 +190,7 @@ export default function OracleHome() {
       }
 
       console.log('🎨 Cor revelada:', data.name, '| Search term:', term);
-      setResult({ ...data, num });
+      setResult({ ...data, num, desc: finalDesc });
       setSearchTerm(term.trim());
 
       setTimeout(() => {
@@ -285,7 +355,7 @@ export default function OracleHome() {
             <div className="badge" style={{ boxShadow: `0 0 50px ${result.hex}`, borderColor: result.hex }}>{result.num}</div>
             <h2 className="color-hero" style={{ color: result.hex, textShadow: `0 0 30px ${result.hex}90` }}>{result.name}</h2>
             <div className="insight-card" style={{ borderLeftColor: result.hex }}>
-              <div className="insight-text" dangerouslySetInnerHTML={{ __html: result.desc.replace(/\*\*(.*?)\*\*/g, `<b style="color:${result.hex}">$1</b>`) }} />
+              <div className="insight-text" dangerouslySetInnerHTML={{ __html: result.desc.replace(/\*\*(.*?)\*\*/g, `<b style="color:${result.hex}">$1</b>`).replace(/([A-Z][a-z]+o)\:/g, `<strong style="color:${result.hex}">$1</strong>:`) }} />
               <div className="tags-container">
                 {result.tags.map((tag) => (
                   <span key={tag} className="tag" style={{ borderColor: result.hex }}>{tag}</span>
