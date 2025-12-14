@@ -267,14 +267,28 @@ export default function OracleHome() {
   const handleShare = useCallback(() => {
     if (!result) return;
 
+    const occasion = document.getElementById('occasion')?.value;
+    const occasionNames = {
+      reveillon: '🎆 Réveillon',
+      work: '💼 Carreira',
+      love: '💘 Amor',
+      gym: '⚡ Treino',
+      home: '🏠 Lar'
+    };
+
+    const occasionEmoji = occasionNames[occasion] || '✨ Ocasião';
+    const tagsText = result.tags.join(' • ');
+    const descSnippet = result.desc.replace(/\[MÊS\]:/g, '').substring(0, 80).trim();
+
     console.log('📱 Compartilhando no WhatsApp:', result.name);
-    const text = `🔮 O Oráculo revelou que minha cor para 2026 é ${result.name.toUpperCase()}! Dizem que essa cor atrai dinheiro e amor... Qual é a sua? \n\nDescubra grátis aqui: ${typeof window !== 'undefined' ? window.location.href : 'https://oraculo-cores.vercel.app'}`;
+    const text = `🔮 Minha vibração para ${occasionEmoji} em 2026 é **${result.name.toUpperCase()}**!\n\n${result.archetype}\n${tagsText}\n\n"${descSnippet}..."\n\nQual é a SUA cor para cada ocasião?\n\nDescubra grátis aqui: ${typeof window !== 'undefined' ? window.location.href : 'https://oraculo-cores.vercel.app'}`;
     const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
 
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'share_intent', {
         platform: 'whatsapp',
         color: result.name,
+        occasion: occasion,
       });
     }
 
