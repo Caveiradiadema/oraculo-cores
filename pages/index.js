@@ -6,14 +6,14 @@ console.log('✅ pages/index.js carregado com sucesso');
 
 const NUMEROLOGY_DATA = {
   1: { name: "Vermelho", hex: "#ff5252", archetype: "O Pioneiro", tags: ["Iniciativa", "Fogo", "Ação"], desc: "Seu 2026 pede **Chama Viva**. O número 1 é o Big Bang pessoal. O **Vermelho** te dá a voltagem necessária para sair da inércia, liderar sem pedir licença e queimar qualquer insegurança." },
-  2: { name: "Laranja", hex: "#ff9800", archetype: "O Diplomata", tags: ["Conexão", "Calor", "Fluxo"], desc: "[MÊS]: Seu 2026 será sobre **Fusão**. O **Laranja** ativa seu magnetismo social, atraindo parcerias férteis e amores leves. É a cor que dissolve barreiras e cria pontes douradas." },
-  3: { name: "Amarelo", hex: "#ffeb3b", archetype: "O Criador", tags: ["Brilho", "Expansão", "Sol"], desc: "[MÊS]: Seu 2026 é o ano do **Palco**. O universo quer te ver brilhar. O **Amarelo** atua como um holofote solar, destravando a abundância que vem através da sua voz e da sua imagem." },
-  4: { name: "Verde", hex: "#4caf50", archetype: "O Construtor", tags: ["Raiz", "Saúde", "Terra"], desc: "[MÊS]: Seu 2026 exige **Alicerce**. É hora de materializar. O **Verde** acalma a mente ansiosa e traz a frequência de cura necessária para que seus projetos cresçam sólidos como árvores antigas." },
-  5: { name: "Azul Claro", hex: "#40c4ff", archetype: "O Explorador", tags: ["Ar", "Liberdade", "Voo"], desc: "[MÊS]: Seu 2026 traz **Ventos de Mudança**. A estagnação acabou. O **Azul Claro** é seu oxigênio: ele permite navegar por transformações rápidas com a leveza de quem sabe voar." },
-  6: { name: "Azul Índigo", hex: "#536dfe", archetype: "O Guardião", tags: ["Profundidade", "Lealdade", "Mar"], desc: "[MÊS]: Seu 2026 foca no **Coração**. É hora de proteger o que importa. O **Azul Índigo** traz a autoridade serena do oceano profundo, curando relações e trazendo nobreza à sua presença." },
-  7: { name: "Violeta", hex: "#e040fb", archetype: "O Místico", tags: ["Intuição", "Magia", "Éter"], desc: "[MÊS]: Seu 2026 é sobre **Oculto**. Enquanto todos olham fora, você vê além. O **Violeta** blinda sua aura e aguça o terceiro olho para encontrar tesouros onde ninguém mais está procurando." },
-  8: { name: "Rosa", hex: "#ff4081", archetype: "O Visionário", tags: ["Poder", "Império", "Ambição"], desc: "[MÊS]: Seu 2026 é o ano da **Coroação**. O sucesso material te espera. O **Rosa** equilibra sua ambição com humanidade, garantindo que você conquiste o trono sem perder a alma." },
-  9: { name: "Dourado", hex: "#ffd740", archetype: "O Mestre", tags: ["Glória", "Finalização", "Ouro"], desc: "[MÊS]: Seu 2026 é a **Transmutação**. Um ciclo se fecha com chave de ouro. O **Dourado** atrai a vitória final e a sabedoria suprema, limpando o caminho para uma nova era." }
+  2: { name: "Laranja", hex: "#ff9800", archetype: "O Diplomata", tags: ["Conexão", "Calor", "Fluxo"], desc: "[ANO] [MÊS]: será sobre **Fusão**. O **Laranja** ativa seu magnetismo social, atraindo parcerias férteis e amores leves. É a cor que dissolve barreiras e cria pontes douradas." },
+  3: { name: "Amarelo", hex: "#ffeb3b", archetype: "O Criador", tags: ["Brilho", "Expansão", "Sol"], desc: "[ANO] [MÊS]: é o ano do **Palco**. O universo quer te ver brilhar. O **Amarelo** atua como um holofote solar, destravando a abundância que vem através da sua voz e da sua imagem." },
+  4: { name: "Verde", hex: "#4caf50", archetype: "O Construtor", tags: ["Raiz", "Saúde", "Terra"], desc: "[ANO] [MÊS]: exige **Alicerce**. É hora de materializar. O **Verde** acalma a mente ansiosa e traz a frequência de cura necessária para que seus projetos cresçam sólidos como árvores antigas." },
+  5: { name: "Azul Claro", hex: "#40c4ff", archetype: "O Explorador", tags: ["Ar", "Liberdade", "Voo"], desc: "[ANO] [MÊS]: traz **Ventos de Mudança**. A estagnação acabou. O **Azul Claro** é seu oxigênio: ele permite navegar por transformações rápidas com a leveza de quem sabe voar." },
+  6: { name: "Azul Índigo", hex: "#536dfe", archetype: "O Guardião", tags: ["Profundidade", "Lealdade", "Mar"], desc: "[ANO] [MÊS]: foca no **Coração**. É hora de proteger o que importa. O **Azul Índigo** traz a autoridade serena do oceano profundo, curando relações e trazendo nobreza à sua presença." },
+  7: { name: "Violeta", hex: "#e040fb", archetype: "O Místico", tags: ["Intuição", "Magia", "Éter"], desc: "[ANO] [MÊS]: é sobre **Oculto**. Enquanto todos olham fora, você vê além. O **Violeta** blinda sua aura e aguça o terceiro olho para encontrar tesouros onde ninguém mais está procurando." },
+  8: { name: "Rosa", hex: "#ff4081", archetype: "O Visionário", tags: ["Poder", "Império", "Ambição"], desc: "[ANO] [MÊS]: é o ano da **Coroação**. O sucesso material te espera. O **Rosa** equilibra sua ambição com humanidade, garantindo que você conquiste o trono sem perder a alma." },
+  9: { name: "Dourado", hex: "#ffd740", archetype: "O Mestre", tags: ["Glória", "Finalização", "Ouro"], desc: "[ANO] [MÊS]: é a **Transmutação**. Um ciclo se fecha com chave de ouro. O **Dourado** atrai a vitória final e a sabedoria suprema, limpando o caminho para uma nova era." }
 };
 
 const getMonthName = (monthNum) => {
@@ -151,11 +151,14 @@ export default function OracleHome() {
 
       if (!data) throw new Error('Cor não encontrada');
 
-      // Substitui [MÊS] se não for Réveillon
+      // Substitui [ANO] [MÊS] se não for Réveillon
       let finalDesc = data.desc;
       if (occasion !== 'reveillon') {
         const currentMonth = getMonthName(new Date().getMonth() + 1);
-        finalDesc = finalDesc.replace('[MÊS]', currentMonth);
+        const currentYear = new Date().getFullYear();
+        finalDesc = finalDesc
+          .replace('[ANO]', `${currentYear}`)
+          .replace('[MÊS]:', `${currentMonth}:`);
       }
 
       if (typeof window !== 'undefined' && window.gtag) {
