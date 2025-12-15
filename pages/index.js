@@ -395,19 +395,23 @@ export default function OracleHome() {
         <link rel="icon" type="image/png" sizes="192x192" href="/img/android-chrome-192x192.png" />
         <link rel="icon" type="image/png" sizes="512x512" href="/img/android-chrome-512x512.png" />
         <title>Oráculo 2026 | Sua Cor do Poder</title>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="/styles.css" />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6341691198145403" crossOrigin="anonymous"></script>
       </Head>
 
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-Z7BKYJSJN6" strategy="afterInteractive" />
+      {/* 🔥 Google Tag Manager - LAZY LOAD (não bloqueia renderização) */}
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-Z7BKYJSJN6" strategy="lazyOnload" />
       <Script
         id="gtag-init"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-Z7BKYJSJN6');`
         }}
+      />
+
+      {/* 🔥 AdSense - LAZY LOAD (carrega depois que página renderiza) */}
+      <Script
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6341691198145403"
+        strategy="lazyOnload"
+        crossOrigin="anonymous"
       />
 
       <div className="container">
